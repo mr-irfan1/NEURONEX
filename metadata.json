@@ -1,0 +1,7 @@
+{
+  "name": "NeuroNex",
+  "description": "An AI-powered learning and coding companion platform with adaptive study paths, real-time coding assistance, and avatar tutoring.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
