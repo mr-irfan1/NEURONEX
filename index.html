@@ -1,72 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>NeuroNex - AI Learning Companion</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
-      
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #0B0B0F;
-        color: #EDEDED;
-      }
-      
-      .font-mono {
-        font-family: 'JetBrains Mono', monospace;
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NeuroNex - AI Learning Companion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0B0B0F;
+      color: #EDEDED;
+    }
+
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #141419;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #333;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #444;
+    }
+
+    /* Animations */
+    @keyframes pulse-glow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 10px rgba(245, 245, 0, 0.1);
       }
 
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
+      50% {
+        box-shadow: 0 0 20px rgba(245, 245, 0, 0.3);
       }
-      ::-webkit-scrollbar-track {
-        background: #141419; 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #333; 
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #444; 
-      }
+    }
 
-      /* Animations */
-      @keyframes pulse-glow {
-        0%, 100% { box-shadow: 0 0 10px rgba(245, 245, 0, 0.1); }
-        50% { box-shadow: 0 0 20px rgba(245, 245, 0, 0.3); }
-      }
-      .animate-pulse-glow {
-        animation: pulse-glow 2s infinite;
-      }
-      
-      .glass-panel {
-        background: rgba(20, 20, 25, 0.6);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-      }
-    </style>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              background: '#0B0B0F',
-              surface: '#141419',
-              primary: '#F5F500', // Electric Yellow
-              secondary: '#8A5CF6', // Violet
-              subtext: '#A0A0A8',
-              success: '#4ADE80',
-              error: '#EF4444'
-            }
+    .animate-pulse-glow {
+      animation: pulse-glow 2s infinite;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 25, 0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#0B0B0F',
+            surface: '#141419',
+            primary: '#F5F500', // Electric Yellow
+            secondary: '#8A5CF6', // Violet
+            subtext: '#A0A0A8',
+            success: '#4ADE80',
+            error: '#EF4444'
           }
         }
       }
-    </script>
+    }
+  </script>
   <script type="importmap">
 {
   "imports": {
@@ -80,10 +92,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+
 </head>
-  <body>
-    <div id="root"></div>
+
+<body>
+  <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>
